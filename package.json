@@ -1,0 +1,22 @@
+{
+  "name": "rizhiyi-jslogger",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khejing/rizhiyi-jslogger.git"
+  },
+  "keywords": [
+    "rizhiyi"
+  ],
+  "author": "Will Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khejing/rizhiyi-jslogger/issues"
+  },
+  "homepage": "https://github.com/khejing/rizhiyi-jslogger#readme"
+}
