@@ -1,5 +1,5 @@
 {
-  "name": "jslogger",
+  "name": "logger.js",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khejing/jslogger.git"
+    "url": "git+https://github.com/khejing/logger.js.git"
   },
   "keywords": [
     "rizhiyi"
@@ -16,7 +16,7 @@
   "author": "Will Lee",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khejing/jslogger/issues"
+    "url": "https://github.com/khejing/logger.js/issues"
   },
-  "homepage": "https://github.com/khejing/jslogger#readme"
+  "homepage": "https://github.com/khejing/logger.js#readme"
 }
