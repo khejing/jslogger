@@ -1,1 +1,1 @@
-# jslogger
+# logger.js
