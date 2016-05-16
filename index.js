@@ -11,7 +11,7 @@ let ajaxAppender = new Log4js.AjaxAppender(LOGURL+"/inputs/d00dadc0ffee");
 let jsonLayout = new Log4js.JSONLayout();
 ajaxAppender.setLayout(jsonLayout);
 
-let consoleAppender = new Log4js.SafariJSConsoleAppender();
+let consoleAppender = new Log4js.BrowserConsoleAppender();
 consoleAppender.setLayout(jsonLayout);
 
 logger.setDateFormat("yyyy-MM-ddthh:mm:ss.SSSO");
