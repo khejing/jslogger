@@ -10,16 +10,15 @@ if(DEVICE_TYPE === 'mobile' && PLATFORM === 'android'){
 
 let jsonLayout = new Log4js.JSONLayout();
 
-/*let ajaxAppender = new Log4js.AjaxAppender(LOGURL+"/inputs/d00dadc0ffee");*/
-//ajaxAppender.setLayout(jsonLayout);
+let ajaxAppender = new Log4js.AjaxAppender(LOGURL+"/inputs/d00dadc0ffee");
+ajaxAppender.setLayout(jsonLayout);
+logger.addAppender(ajaxAppender);
 
 let consoleAppender = new Log4js.BrowserConsoleAppender();
 consoleAppender.setLayout(jsonLayout);
+logger.addAppender(consoleAppender);
 
 logger.setDateFormat("yyyy-MM-ddthh:mm:ss.SSSO");
 logger.setLevel(Log4js.Level.DEBUG);
-
-//logger.addAppender(ajaxAppender);
-logger.addAppender(consoleAppender);
 
 export default logger;
