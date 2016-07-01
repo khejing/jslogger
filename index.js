@@ -1,12 +1,22 @@
 import {LOGURL} from './config.js';
 import Log4js from 'log4js-dist';
+import {isWeChat, isAndroid, isiPhone} from 'ua.js';
 
-let logger;
-if(DEVICE_TYPE === 'mobile' && PLATFORM === 'android'){
-    logger = new Log4js.getLogger("android");
-}else{
-    logger = new Log4js.getLogger("desktop")
+function getLogger(){
+  //微信优先
+  if(isWeChat()){
+    return new Log4js.getLogger("WeChat");
+  }
+  if(isAndroid()){
+    return new Log4js.getLogger('Android');
+  }
+  if(isiPhone()){
+    return new Log4js.getLogger('iPhone');
+  }
+  return new Log4js.getLogger("Desktop")
 }
+
+let logger = getLogger();
 
 let jsonLayout = new Log4js.JSONLayout();
 
