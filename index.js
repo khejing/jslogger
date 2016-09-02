@@ -1,5 +1,5 @@
 import Log4js from 'log4js-dist';
-import {isWeChat, isAndroid, isiPhone} from 'ua.js';
+import {isWeChat, isAndroid, isiPhone, isElectron} from 'ua.js';
 
 function getLogger(){
   //微信优先
@@ -11,6 +11,9 @@ function getLogger(){
   }
   if(isiPhone()){
     return new Log4js.getLogger('iPhone');
+  }
+  if(isElectron()){
+    return new Log4js.getLogger('Electron');
   }
   return new Log4js.getLogger("Desktop")
 }
