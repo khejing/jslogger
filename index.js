@@ -23,7 +23,7 @@ function Logger({serverDomain, port, isAppendingConsole}){
 
   let jsonLayout = new Log4js.JSONLayout();
 
-  let ajaxAppender = new Log4js.AjaxAppender("http://"+serverDomain+":"+port+"/inputs/d00dadc0ffee");
+  let ajaxAppender = new Log4js.AjaxAppender("//"+serverDomain+":"+port+"/inputs/d00dadc0ffee");
   ajaxAppender.setLayout(jsonLayout);
   logger.addAppender(ajaxAppender);
 
